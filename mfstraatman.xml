@@ -1,0 +1,365 @@
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
+           xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>https://opcua.factorylab.nl/sasservaart</Uri>
+    </NamespaceUris>
+    <Aliases>
+        <Alias Alias="Boolean">i=1</Alias>
+        <Alias Alias="UInt32">i=7</Alias>
+        <Alias Alias="Double">i=11</Alias>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ModelInfo Tool="UaModeler" Hash="qnoF+0+hDsL4GCM37vuINw==" Version="1.4.3"/>
+        </Extension>
+    </Extensions>
+    <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:LoraSwitchBoxType">
+        <DisplayName>LoraSwitchBoxType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6001" BrowseName="1:WerkverlichtingLangAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Werkverlichting lang aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6002" BrowseName="1:Identificatienummer" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Identificatienummer</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=7</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:UInt32>0</uax:UInt32>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6003" BrowseName="1:ApparaatEui" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Apparaat EUI</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=12</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:String>70b3d55dc008</uax:String>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6004" BrowseName="1:BatterijLaadStatus" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterij laad status</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=11</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=3001</Reference>
+        </References>
+        <Value>
+            <uax:Double>25.3</uax:Double>
+        </Value>
+    </UAVariable>
+
+    <UAVariable NodeId="ns=1;i=3001" BrowseName="1:Eenheid" ParentNodeId="ns=1;i=6004" DataType="String">
+        <DisplayName>Eenheid</DisplayName>
+        <Description>Eenheid</Description>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6004</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=12</Reference>
+        </References>
+        <Value>
+            <uax:String>Percentage</uax:String>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6005" BrowseName="1:BatterijVoltage" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterij voltage</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=11</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=3002</Reference>
+        </References>
+        <Value>
+            <uax:Double>25.3</uax:Double>
+        </Value>
+    </UAVariable>
+
+    <UAVariable NodeId="ns=1;i=3002" BrowseName="1:Eenheid" ParentNodeId="ns=1;i=6005" DataType="String">
+        <DisplayName>Eenheid</DisplayName>
+        <Description>Eenheid</Description>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=12</Reference>
+        </References>
+        <Value>
+            <uax:String>Volt</uax:String>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6006" BrowseName="1:BatterijStroom" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterij stroom</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=11</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=3003</Reference>
+        </References>
+        <Value>
+            <uax:Double>0.88</uax:Double>
+        </Value>
+    </UAVariable>
+
+    <UAVariable NodeId="ns=1;i=3003" BrowseName="1:Eenheid" ParentNodeId="ns=1;i=6006" DataType="String">
+        <DisplayName>Eenheid</DisplayName>
+        <Description>Eenheid</Description>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6006</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=12</Reference>
+        </References>
+        <Value>
+            <uax:String>Ampere</uax:String>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6007" BrowseName="1:BatterijHoofdschakelaarAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterij hoofdschakelaar aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6008" BrowseName="1:ZonnepanelenHoofdschakelaarAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Zonnepanelen hoofdschakelaar aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6009" BrowseName="1:WerkverlichtingAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Werkverlichting aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6010" BrowseName="1:AanstraalverlichtingAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Aanstraalverlichting aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6011" BrowseName="1:OverspanningsbeveiligingActief" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Overspanningsbeveiliging actief</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6012" BrowseName="1:AanstraalverlichtingBesturingAan" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Aanstraalverlichting besturing aan</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6013" BrowseName="1:Status" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Status</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6014" BrowseName="1:VerbindingsStoring" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Verbinding Ok</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6015" BrowseName="1:BatterijspanningLaag" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterijspanning laag</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6016" BrowseName="1:BatterijspanningKritiek" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Batterijspanning kritiek</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=1</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6017" BrowseName="1:LaatsteSchakelwaarde" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Laatste schakelwaarde</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>0</uax:Boolean>
+        </Value>
+    </UAVariable>
+
+
+
+    <UAMethod ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=7001"
+              BrowseName="1:AanstraalverlichtingInschakelen">
+        <DisplayName>Aanstraalverlichting inschakelen</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6050</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">
+                ns=1;i=1002
+            </Reference>
+        </References>
+    </UAMethod>
+    <UAVariable DataType="Argument" ParentNodeId="ns=1;i=7001" ValueRank="1"
+                NodeId="ns=1;i=6050" ArrayDimensions="1"
+                BrowseName="OutputArguments">
+        <DisplayName>OutputArguments</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty"
+                       IsForward="false">ns=1;i=7001</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <ListOfExtensionObject>
+                <ExtensionObject>
+                    <TypeId>
+                        <Identifier>i=297</Identifier>
+                    </TypeId>
+                    <Body>
+                        <Argument>
+                            <Name>Ingeschakeld</Name>
+                            <DataType>
+                                <Identifier>i=12</Identifier>
+                            </DataType>
+                            <ValueRank>-1</ValueRank>
+                            <ArrayDimensions></ArrayDimensions>
+                            <Description/>
+                        </Argument>
+                    </Body>
+                </ExtensionObject>
+            </ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    
+    <UAMethod ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=7002"
+              BrowseName="1:AanstraalverlichtingUitschakelen">
+        <DisplayName>Aanstraalverlichting uitschakelen</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6051</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">
+                ns=1;i=1002
+            </Reference>
+        </References>
+    </UAMethod>
+    <UAVariable DataType="Argument" ParentNodeId="ns=1;i=7002" ValueRank="1"
+                NodeId="ns=1;i=6051" ArrayDimensions="1"
+                BrowseName="OutputArguments">
+        <DisplayName>OutputArguments</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty"
+                       IsForward="false">ns=1;i=7002</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <ListOfExtensionObject>
+                <ExtensionObject>
+                    <TypeId>
+                        <Identifier>i=297</Identifier>
+                    </TypeId>
+                    <Body>
+                        <Argument>
+                            <Name>Uitgeschakeld</Name>
+                            <DataType>
+                                <Identifier>i=12</Identifier>
+                            </DataType>
+                            <ValueRank>-1</ValueRank>
+                            <ArrayDimensions></ArrayDimensions>
+                            <Description/>
+                        </Argument>
+                    </Body>
+                </ExtensionObject>
+            </ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+
+</UANodeSet>

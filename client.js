@@ -1,7 +1,7 @@
 const { OPCUAClient, makeBrowsePath, AttributeIds, resolveNodeId, TimestampsToReturn, MonitoringMode, SetMonitoringModeRequest } = require("node-opcua");
 const async = require("async");
 
-// const endpointUrl = "opc.tcp://<hostname>:4334/UA/MyLittleServer";
+// const endpointUrl = "opc.tcp://python:4334/UA/MyLittleServer";
 const endpointUrl = "opc.tcp://" + require("os").hostname() + ":4334/UA/MyLittleServer";
 const client = OPCUAClient.create({
     endpointMustExist: false
@@ -40,11 +40,17 @@ async.series(
 
         // step 3 : browse
         function (callback) {
-            the_session.browse("RootFolder", function (err, browseResult) {
-                if (!err) {
+    //        the_session.browse("RootFolder", function (err, browseResult) {
+            the_session.browse("ns=3;", function (err, browseResult) {
+                    if (!err) {
                     console.log("Browsing rootfolder: ");
                     for (let reference of browseResult.references) {
-                        console.log(reference.browseName.toString(), reference.nodeId.toString());
+                        the_session.browse(reference.nodeId, function (err, browse2Result) {
+                            for (let reference2 of browse2Result.references) {
+                                console.log(reference2.browseName.toString());
+                            }
+                        });
+                        console.log(reference.browseName.toString(), reference.nodeId.toString(), reference.displayName.toString());
                     }
                 }
                 callback(err);

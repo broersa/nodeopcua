@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-opcua": "^2.128.0"
+    "easy-table": "^1.2.0",
+    "node-opcua": "^2.128.0",
+    "treeify": "^1.1.0"
   }
 }
